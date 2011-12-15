@@ -15,9 +15,13 @@ then, from the directory this document is in do like this:
 
 ```
 $ mkvirtualenv ecomom --no-site-packages
-
 $ workon ecomom
-
 $ pip install -r requirements.txt
 ```
 you will be all set up.
+
+to run just the benchmark tests, run:
+
+```
+$ nosetests selenium/benchmarks.py
+```

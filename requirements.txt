@@ -1,2 +1,3 @@
 yolk
 selenium >= 2.15.0
+nose >= 1.1.2
