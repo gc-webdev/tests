@@ -33,9 +33,11 @@ for users in $(seq $start_users $step_users $end_users); do
     CMD="${jmeter_bin} -n -t ${test_file} -l ${log_dir}/$(basename ${test_file} .jmx)_${users}u_${num_loops}l_${todays_date}.jtl"
 
     if [[ $DEBUG -eq 1 ]]; then
-        echo "# DEBUG: USERS: $users"
-        echo $CMD
+        echo "DEBUG: would run command: $CMD"
     else
+        echo "# USERS: $users"
+        echo "# LOOPS: $num_loops"
+        echo
         time $CMD
         sleep 10
     fi
