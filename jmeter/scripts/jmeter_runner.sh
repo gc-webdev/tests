@@ -36,8 +36,8 @@ for users in $(seq $start_users $step_users $end_users); do
         echo "# DEBUG: USERS: $users"
         echo $CMD
     else
-        $CMD
+        time $CMD
         sleep 10
     fi
-    echo
+    echo "--------------------"
 done
